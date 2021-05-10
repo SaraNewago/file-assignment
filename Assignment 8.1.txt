@@ -1,0 +1,20 @@
+import os 
+
+directory=input("Which directory do you want to save your file in?")
+file=input("What is your file's name?")
+os.path.isdir(directory)
+name=input("What's your name?")
+address=input("What is your address?")
+phone_number=input("What's your phone number?")
+
+with open (file, 'w') as file_object:
+  file_object.write(name)
+  file_object.write(",")
+  file_object.write(address)
+  file_object.write(",")
+  file_object.write(phone_number)
+
+
+with open (file, 'r') as file_object:
+  data=file_object.read()
+  print(data)
